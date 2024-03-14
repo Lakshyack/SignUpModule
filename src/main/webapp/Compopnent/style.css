@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+position: relative;
+top: 80px;
+justify-content: center;
+
+}
+body{
+    background: url("pexels-lukas-317371.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.card{
+    width: 40vw;
+}
+.title_text{
+    /* border: 2px solid black; */
+    padding-bottom: 15px;
+    padding-top: 0px;
+    margin-top: 10px;
+    /* margin: 15px; */
+}
