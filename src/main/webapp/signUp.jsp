@@ -93,7 +93,13 @@
                             </h5>
                         <% } %>
 
-                        
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                              <input type="file" name="img" class="custom-file-input" id="inputGroupFile01">
+                              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            </div>
+                          </div>
+
                         <div class="form-check">
                             <input type="checkbox" name="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>

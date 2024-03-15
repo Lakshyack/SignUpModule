@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -22,6 +23,9 @@ public class signUp extends HttpServlet {
         String Password = req.getParameter("Password");
         String cPassword = req.getParameter("cPassword");
         String checkBox = req.getParameter("checkbox");
+        Part part = req.getPart("img");
+        String filename = part.getSubmittedFileName();
+        out.println(filename);
 
       if(checkBox != null && checkBox.equals("on")){
           if(Password.equals(cPassword)){
@@ -34,6 +38,7 @@ public class signUp extends HttpServlet {
                   pstmt.setString(2,Email);
                   pstmt.setString(3,Phone);
                   pstmt.setString(4,Password);
+
 
                   int rowsAffected = pstmt.executeUpdate();
 
